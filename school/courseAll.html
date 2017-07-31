@@ -10,8 +10,81 @@
 	<link href="../css/dashboard.css" rel="stylesheet"/>
 	<link href="../css/top.css" rel="stylesheet"/>
     <link href="../css/foot.css" rel="stylesheet"/>
-    <style type="text/css">
-    </style>
+    <style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 10px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				z-index: 1;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #efeff4;
+			}
+		</style>
 </head>
 <body class="pagebg  bg_gradient">
 	<div >
@@ -47,91 +120,213 @@
 			</a>
 		</nav>
 
-		<div id="item1" class="item-call mui-content mui-control-content  mui-active">
-
-			<div class="myh5_card" >
-				<a href="#" class="top sc_purple">
-					<img src="../images/school/cc_pic.png" class="photo" />
-
-					<p class="title">Walking 上海</p>
-					<p href="#"  class="content1">“国际理解教育”</p>
-					<p class="content2">校本课程教材 试用本</p>
-				</a>
-			</div>
-
-			<div class="myh5_card">
-				<a href="#" class="top sc_cyan">
-					<img src="../images/school/cc_pic.png" class="photo" />
-					<p class="title">艺术摄影</p>
-					<p class="content1">班级：三 1 班</p>
-					<p class="content2">时间：周一</p>
-				</a>
-			</div>
-
-			<div class="myh5_card">
-				<a href="#" class="top sc_orange">
-					<img src="../images/school/cc_pic.png" class="photo" />
-					<p class="title">户外体育</p>
-					<p class="content1">班级：三 1 班</p>
-					<p class="content2">时间：周一</p>
-				</a>
-			</div>
-
-		</div>
-
-		<div id="item2" class="item-call mui-content mui-control-content">
-			<div class="mui-segmented-control desc-control">
-				<a class="mui-control-item mui-active " href="#item11"><span>全部</span></a>
-				<a class="mui-control-item " href="#item12"><span>自然</span></a>
-				<a class="mui-control-item " href="#item13"><span>体育</span></a>
-				<a class="mui-control-item " href="#item14"><span>美术</span></a>
-				<a class="mui-control-item " href="#item15"><span>音乐</span></a>
-				<a class="mui-control-item " href="#item16"><span>历史</span></a>
-			</div>
-			<div id="item11" class="mui-control-content mui-active" style="margin-top:55px;">
-				<div class="myh5_card">
-					<a href="#" class="top sc_cyan">
-						<img src="../images/school/cc_pic.png" class="photo" />
-						<img src="../images/school/sc_add.png" class="arrow" />
-						<p class="title">Walking 上海</p>
-						<p class="content1">班级：三 1 班</p>
-						<p class="content2">时间：周一</p>
-					</a>
+		<div id="item1" class="item-call mui-content mui-control-content mui-fullscreen mui-active" style="top:64px;bottom: 50px;">
+			<div id="slider" class="mui-slider mui-fullscreen">				
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">									
+									<li class="mui-table-view-cell">
+										<div class="myh5_card" >
+											<a href="#" class="top sc_purple">
+												<img src="../images/school/cc_pic.png" class="photo" />
+							
+												<p class="title">Walking 上海</p>
+												<p href="#"  class="content1">“国际理解教育”</p>
+												<p class="content2">校本课程教材 试用本</p>
+											</a>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="myh5_card">
+											<a href="#" class="top sc_cyan">
+												<img src="../images/school/cc_pic.png" class="photo" />
+												<p class="title">艺术摄影</p>
+												<p class="content1">班级：三 1 班</p>
+												<p class="content2">时间：周一</p>
+											</a>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="myh5_card">
+											<a href="#" class="top sc_orange">
+												<img src="../images/school/cc_pic.png" class="photo" />
+												<p class="title">户外体育</p>
+												<p class="content1">班级：三 1 班</p>
+												<p class="content2">时间：周一</p>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
 				</div>
-
-				<div class="myh5_card">
-					<a href="#" class="top sc_pink">
-						<img src="../images/school/cc_pic.png" class="photo" />
-						<img src="../images/school/sc_add.png" class="arrow" />
-						<p class="title">Walking 上海</p>
-						<p class="content1">班级：三 1 班</p>
-						<p class="content2">时间：周一</p>
-					</a>
-				</div>
-
 			</div>
-
 		</div>
-
-
+ 
+		<div id="item2" class="item-call mui-content mui-control-content mui-fullscreen" style="top:64px;bottom: 50px;">
+			<div id="slider" class="mui-slider mui-fullscreen" style="top:0px;">
+				<div class="mui-segmented-control desc-control">
+					<a class="mui-control-item mui-active " href="#item11"><span>全部</span></a>
+					<a class="mui-control-item " href="#item12"><span>自然</span></a>
+					<a class="mui-control-item " href="#item13"><span>体育</span></a>
+					<a class="mui-control-item " href="#item14"><span>美术</span></a>
+					<a class="mui-control-item " href="#item15"><span>音乐</span></a>
+					<a class="mui-control-item " href="#item16"><span>历史</span></a>
+				</div>
+				<div class="mui-slider-group mui-fullscreen" style="top:37px;bottom: 0px;">
+					<div id="item11" class="mui-slider-item mui-control-content mui-active" style="margin-top:0px;">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">									
+									<li class="mui-table-view-cell">
+										<div class="myh5_card">
+											<a href="#" class="top sc_cyan">
+												<img src="../images/school/cc_pic.png" class="photo" />
+												<img src="../images/school/sc_add.png" class="arrow" />
+												<p class="title">Walking 上海</p>
+												<p class="content1">班级：三 1 班</p>
+												<p class="content2">时间：周一</p>
+											</a>
+										</div>
+									</li>
+																	
+									<li class="mui-table-view-cell">
+										<div class="myh5_card">
+											<a href="#" class="top sc_pink">
+												<img src="../images/school/cc_pic.png" class="photo" />
+												<img src="../images/school/sc_add.png" class="arrow" />
+												<p class="title">Walking 上海</p>
+												<p class="content1">班级：三 1 班</p>
+												<p class="content2">时间：周一</p>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
 
 	</div>
 	<script src="../js/jquery-2.1.4.min.js"></script>
 	<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.pullToRefresh.js"></script>
+	<script src="../js/mui.pullToRefresh.material.js"></script>
+	<script src="../js/app.js"></script>
 	<script type="text/javascript">
         mui.init();
-
         document.getElementById('it1').addEventListener('tap',function(){
 			$('#action-1').css('display','block');
 			$('#action-2').css('display','block');
             $('.mui-bar-nav').css('box-shadow','0 1px 6px #ccc');
-
         });
         document.getElementById('it2').addEventListener('tap',function(){
 			$('#action-1').css('display','none');
 			$('#action-2').css('display','none');
 			$('.mui-bar-nav').css('box-shadow','none');
+			
+			
         });
+        (function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				var pageIndex = 1;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有下拉刷新，上拉加载。
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+						$(pullRefreshEl).pullToRefresh({
+							down: {
+								callback: function() {
+									var self = this;
+									var userInfo = app.getState(); 
+									if(userInfo.manageId!=undefined && userInfo.manageId!=''){
+										app.getCourseAll(userInfo,5,1,function(data){
+											if(data.code==0){												
+												var ul = self.element.querySelector('.mui-table-view');
+												ul.innerHTML="";
+												ul.insertBefore(createFragment(index,ul, data.objectList), ul.firstChild);
+											 	 pageIndex=1;
+											}else{
+												mui.toast(data.msg);
+											}
+											
+												self.endPullDownToRefresh();
+										});
+									}else{
+										app.gotoLogin();
+									}
+								}
+							},
+							up: {
+								callback: function() {
+									var self = this;
+									var aa = index;
+									var userInfo = app.getState(); 
+									if(userInfo.manageId!=undefined && userInfo.manageId!=''){
+										app.getCourseAll(userInfo,5,pageIndex+1,function(data){
+											if(data.code==0){												
+												var ul = self.element.querySelector('.mui-table-view'); 
+												ul.appendChild(createFragment(index,ul, data.objectList), ul.firstChild);
+											 	 pageIndex++;
+											}else{
+												mui.toast(data.msg);
+											}
+											
+												self.endPullUpToRefresh();
+										});
+									}else{
+										app.gotoLogin();
+									}
+								}
+							}
+						});
+					});
+					var createFragment = function(index,ul, objectList) {
+						var length = ul.querySelectorAll('li').length;
+						var fragment = document.createDocumentFragment();
+						var li;
+						for (var i = 0; i < objectList.length; i++) {
+							li = document.createElement('li');
+							li.className = 'mui-table-view-cell';
+							var insertHtml=""
+							if(index==0){ //我的课程
+								insertHtml+="<div class=\"myh5_card\">";
+								insertHtml+="	<a href=\"#\" class=\"top sc_orange\">";//	
+								insertHtml+="		<img src=\"../images/school/cc_pic.png\" class=\"photo\" />";
+								insertHtml+="		<p class=\"title\">"+objectList[i].rcName+"</p>";
+								insertHtml+="		<p class=\"content1\">班级："+objectList[i].tcId+"</p>";
+								insertHtml+="		<p class=\"content2\">时间："+objectList[i].rcTime+"</p>";
+								insertHtml+="	</a>";
+								insertHtml+="</div>";
+							}else if(index==1){//全部课程
+								insertHtml+="<div class=\"myh5_card\">";
+								insertHtml+="	<a href=\"#\" class=\"top sc_pink\">";
+								insertHtml+="		<img src=\"../images/school/cc_pic.png\" class=\"photo\" />";
+								insertHtml+="		<img src=\"../images/school/sc_add.png\" class=\"arrow\" />";
+								insertHtml+="		<p class=\"title\">"+objectList[i].rcName+"</p>";
+								insertHtml+="		<p class=\"content1\">班级："+objectList[i].tcId+"</p>";
+								insertHtml+="		<p class=\"content2\">时间："+objectList[i].rcTime+"</p>";
+								insertHtml+="	</a>";
+								insertHtml+="</div>";
+							}
+							li.innerHTML = insertHtml;
+							fragment.appendChild(li);
+						}
+						return fragment;
+					};
+				});
+			})(mui);
 	</script>
 
 </body>

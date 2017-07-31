@@ -4309,7 +4309,7 @@ body > .mui-progressbar
 }
 .mui-slider .mui-slider-group .mui-slider-item img
 {
-    width: 100%;
+    /*width: 100%;*/
 }
 .mui-slider .mui-slider-group .mui-slider-item .mui-table-view:before, .mui-slider .mui-slider-group .mui-slider-item .mui-table-view:after
 {
@@ -5329,7 +5329,7 @@ body > .mui-progressbar
 
 .mui-bar-nav ~ .mui-content .mui-slider.mui-fullscreen
 {
-    top: 44px;
+    /*top: 44px;*/
 }
 
 .mui-bar-tab ~ .mui-content .mui-slider.mui-fullscreen .mui-segmented-control ~ .mui-slider-group

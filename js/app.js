@@ -7,7 +7,7 @@
 	/**
 	 * 用户登录
 	 **/
-	owner.hostname='http://123.184.40.198:8080/course-api';
+	owner.hostname='http://api.course.com:8081/course-api';
 	owner.login = function(loginInfo, callback) {
 		//mui.toast('欢迎体验Hello MUI');
 		callback = callback || $.noop;
@@ -25,7 +25,7 @@
 //			return loginInfo.account == user.account && loginInfo.password == user.password;
 //		});
 //
-		mui.ajax( 'http://api.course.com:8081/course-api/view/login/loginView.shtml',{
+		mui.ajax( owner.hostname+'/view/login/loginView.shtml',{
 			data:{
 				loginName:loginInfo.account,
 				loginPassword:loginInfo.password
@@ -65,8 +65,49 @@
 		var state = owner.getState();
 		state.account = useInfo.loginName;
 		state.token = useInfo.id;
+		state.manageId = useInfo.manageId;
 		owner.setState(state); 
 	};
+	/**
+	 * 获取当前状态
+	 **/
+	owner.getState = function() {
+		var stateText = localStorage.getItem('$state') || "{}";
+		return JSON.parse(stateText);
+	};
+	owner.gotoLogin = function(){
+		var state = {} ;
+		owner.setState(state); 
+		window.location.href='../login.html'
+		
+	}
+/*
+ * 获取课程列表
+ * 
+ * 
+ * */
+	owner.getCourseAll=function(userInfo,pageSize,pageIndex,callback){
+		mui.ajax( owner.hostname+'/view/teachingManage/listData.shtml?manageId='+userInfo.manageId+'&pageSize='+pageSize+'&pageIndex='+pageIndex,{
+			
+			dataType:'json',//服务器返回json格式数据
+			type:'post',//HTTP请求类型
+			timeout:10000,//超时时间设置为10秒； 
+	        //contentType:"application/x-www-form-urlencoded; charset=utf-8",
+			headers:{'Content-Type':'application/json; charset=utf-8'},	              
+			success:function(data){
+				return callback(data);
+			},
+			error:function(xhr,type,errorThrown){
+				//异常处理；
+				var msg={
+					code:-1,
+					msg:"获取数据失败！"
+				}
+					return callback(msg);
+			}
+		});
+	}
+
 
 	/**
 	 * 新用户注册
@@ -91,13 +132,7 @@
 		return callback();
 	};
 
-	/**
-	 * 获取当前状态
-	 **/
-	owner.getState = function() {
-		var stateText = localStorage.getItem('$state') || "{}";
-		return JSON.parse(stateText);
-	};
+	
 
 	/**
 	 * 设置当前状态
