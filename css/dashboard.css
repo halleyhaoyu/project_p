@@ -1,0 +1,83 @@
+.fixed-mui{top:50px;width: 100%;}
+
+.title-control .mui-control-item.mui-active{
+    color: #D9AA34;
+    /*color: #aa45bd;*/
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.title-control .mui-control-item {
+    color: #fff;
+    line-height:32px;
+    border-left: 0;
+    opacity: 1;
+}
+.title-control{
+    width:55% !important;
+    border: 0;
+    top:24px !important;
+    border-radius: 20px;
+    background: #D9AA34;
+    /*background: #CC8FD7;*/
+}
+
+
+.desc-control {
+    width: 100% !important;
+    top: 64px !important;
+    border: 0;
+    border-radius: 0;
+    position: fixed;
+    left:0;
+    /*background: #CC8FD7;*/
+    background: #FEC332;
+    border-top: 1px solid #FED361;
+    /*box-shadow:0 1px 6px #ccc;*/
+}
+.desc-control .mui-control-item.mui-active {
+    color: #FFF;
+    background-color: #FEC332;
+    opacity:1;
+}
+/*.desc-control .mui-control-item.mui-active {*/
+    /*color: #FFF;*/
+    /*background-color: #CC8FD7;*/
+    /*opacity: 1;*/
+/*}*/
+
+.desc-control .mui-control-item {
+    line-height: 36px;
+    color: #000;
+    border-color: #fff;
+    border-left: 1px solid #FED361;
+    opacity: .5;
+}
+
+/*.desc-control .mui-control-item {*/
+    /*line-height: 36px;*/
+    /*color: #aa45bd;*/
+    /*border-color: #fff;*/
+    /*border-left: 1px solid #C988D4;*/
+    /*opacity: .8;*/
+/*}*/
+
+
+p{font-size: 1em;margin: 0;color: #333;}
+.sec-content{position: relative;top:38px;height: 80%;overflow: auto;}
+.item-guaji,.item-call{padding:0 12px;}
+.item-guaji-tel{color: #1a1a1a;padding:10px 0;}
+.item-guaji-rec{color: #1a1a1a;padding:10px 0 2px 0;}
+.item-guaji-time{color: #cccccc;float: right;}
+.data-line{border-bottom:1px solid #cccccc;}
+.item-guaji-msg{color:#cccccc;padding:0 0 10px 0;}
+@media screen and (max-width: 374px){
+	.item-guaji-time,.item-guaji-msg,.item-call-time{font-size:13px;}
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px){
+	.item-guaji-time,.item-guaji-msg,.item-call-time{font-size:14px;}
+}
+
+@media screen and (min-width: 414px) {
+	.item-guaji-time,.item-guaji-msg,.item-call-time{font-size:15px;}
+}

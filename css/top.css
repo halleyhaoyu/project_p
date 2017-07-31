@@ -1,0 +1,36 @@
+.mui-bar-nav,.besttone-head{
+	color: #fff !important;
+	height: 64px;
+	background: -webkit-linear-gradient(bottom,  #FED361,#FEC332); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #FED361,#FEC332); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #FED361,#FEC332); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #FED361,#FEC332); /* 标准的语法（必须放在最后） */
+
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.3)
+}
+.head-dz{
+	width: 66px;
+	position: fixed;
+	right: 24px;
+}
+
+.mui-title {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 84px;
+	position: absolute;
+	display: block;
+	width: 100%;
+	margin: 0 -10px;
+	padding: 0;
+	text-align: center;
+	white-space: nowrap;
+	color: #000;
+}
+
+.mui-bar .mui-title{
+	color: #333;
+	opacity: .5;
+}
+

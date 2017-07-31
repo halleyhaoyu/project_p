@@ -1,0 +1,112 @@
+body, .mui-content {
+	font-family: "微软雅黑";
+	background-color: #FFF;
+	color: #333;
+}
+.mui-content{
+	margin: 12px;
+}
+
+.mui-input-group:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	background-color:#fff;
+}
+
+.button{
+	width: 60px;
+	height: 60px;
+}
+.buttonContianer{
+	position: fixed;
+	background: url(../../images/school/add-icon.png);
+	background-size: cover;
+	top: 260px;;
+	z-index: 999;
+}
+.div-tips{
+	position: fixed;
+	top: 280px;
+	left: 80px;
+}
+
+.buttonContianer .button{
+	position: absolute;
+	opacity: 0;
+}
+.button1{
+	background: url(../../images/school/voice.png);
+	background-size: cover;
+}
+.show .button1{
+	left: 30px;
+	top: -70px;
+}
+.button2{
+	background: url(../../images/school/album.png);
+	background-size: cover;
+}
+.show .button2{
+	left: 80px;
+	top: -35px;
+}
+.button3{
+	background: url(../../images/school/camera.png);
+	background-size: cover;
+}
+.show .button3{
+	left: 80px;
+	top: 30px;
+}
+.button4{
+	background: url(../../images/school/copy.png);
+	background-size: cover;
+}
+.show .button4{
+	left: 30px;
+	top: 70px;
+}
+.show .button{
+	opacity: 1;
+}
+.besttone-full-btn {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.label-desc{
+	position: fixed;
+	margin-top: 6px;
+	margin-left: 12px;
+}
+
+.input-content{
+	border: 1px solid #ddd !important;
+	padding-left: 80px !important;
+	height: 32px !important;
+	line-height: 32px !important;
+}
+
+.out-div{
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 6px 0;
+}
+
+.label-desc-cg{
+	padding: 12px;
+}
+
+
+.text-content{
+	border: 0;
+	padding: 6px 12px;
+}

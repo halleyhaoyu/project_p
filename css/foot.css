@@ -1,0 +1,31 @@
+.foot-icon{
+	background-size: 24px;background-repeat: no-repeat;
+}
+.tabbar-ns-1{
+	background-image: url(../images/tabbar/tabbar-ns-1.png);
+}
+.mui-active .tabbar-ns-1{
+	background-image: url(../images/tabbar/tabbar-sl-1.png);
+}
+.tabbar-ns-2{
+	background-image: url(../images/tabbar/tabbar-ns-2.png);
+}
+.mui-active .tabbar-ns-2{
+	background-image: url(../images/tabbar/tabbar-sl-2.png);
+}
+.tabbar-ns-3{
+	background-image: url(../images/tabbar/tabbar-ns-3.png);
+}
+.mui-active .tabbar-ns-3{
+	background-image: url(../images/tabbar/tabbar-sl-3.png);
+}
+.tabbar-ns-4{
+	background-image: url(../images/tabbar/tabbar-ns-4.png);
+}
+.mui-active .tabbar-ns-4{
+	background-image: url(../images/tabbar/tabbar-sl-4.png);
+}
+.mui-bar-tab {
+    -webkit-box-shadow: 0 0 1px #BBBBBB;
+    box-shadow: 0 0 1px #BBBBBB;
+}

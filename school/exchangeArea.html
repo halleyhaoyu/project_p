@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>交流区</title>
+	<script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.css" rel="stylesheet"/>
+	<link href="../css/icons-extra.css" rel="stylesheet"/>
+	<link href="../css/app.css" rel="stylesheet"/>
+  	<link href="../css/foot.css" rel="stylesheet"/>
+	<link href="../css/dashboard.css" rel="stylesheet"/>
+	<link href="../css/top.css" rel="stylesheet"/>
+	<link href="../css/school/exchangeArea.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<img src="../images/head-dz.png" class="head-dz"/>
+		<h1 class="mui-title">交流区</h1>
+	</header>
+	<div class="mui-content">
+
+		<div class="works-desc">
+			<div class="works-desc-top">
+
+
+
+				<div class="works-answer">
+					<img src="../images/bigicon1.png" class="works-img"/>
+					<p class="works-username">赵先生 <label class="works-time">1小时前</label></p>
+					<p class="works-content">太棒了，很不错。</p>
+					<img src="../images/bigicon3.png" class="works-desc-pic"/>
+					<img src="../images/bigicon3.png" class="works-desc-pic"/>
+					<img src="../images/bigicon3.png" class="works-desc-pic"/>
+				</div>
+				<div class="works-answer">
+					<img src="../images/bigicon1.png" class="works-img"/>
+					<p class="works-username">赵先生 <label class="works-time">1小时前</label></p>
+					<p class="works-content">太棒了，很不错。</p>
+				</div>
+				<div class="works-answer">
+					<img src="../images/bigicon1.png" class="works-img"/>
+					<p class="works-username">赵先生 <label class="works-time">1小时前</label></p>
+					<p class="works-content">摄影术的诞生是随着欧洲资本主义的发展应运而生的，150多年来，它经历了一个由简单到复杂。</p>
+					<img src="../images/bigicon3.png" class="works-desc-pic"/>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+
+	<div class="bottom-div">
+		<img src="../images/school/recording.png"  class="bt-left"/>
+
+		<input type="text" id="inputContent"/>
+
+		<img src="../images/school/addfile.png"  class="bt-right"/>
+	</div>
+
+	
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+
+    onResizeWindow();
+    window.onresize = onResizeWindow;
+    function onResizeWindow(){
+        $("#inputContent").css("width",$(window).width()-72);
+    }
+
+</script>
+</body>
+</html>

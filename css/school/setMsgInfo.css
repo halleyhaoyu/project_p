@@ -1,0 +1,49 @@
+.mui-input-group .mui-input-row:last-child:after,.mui-input-group .mui-input-row.no-after:after{height: 0;}
+.mui-input-group{background-color: inherit;}
+.mui-input-row,.mui-input-row:last-child{background-color: #fff;}
+
+
+.mui-checkbox.mui-left label {
+	width: 75px;
+	padding-right: 0;
+}
+.mui-checkbox.mui-left label, .mui-radio.mui-left label {
+	padding-left: 40px;
+}
+.mui-radio.mui-left input[type='radio'], .mui-checkbox.mui-left input[type='checkbox'] {
+	left: 15px;
+}
+.mui-checkbox input[type='checkbox'] ,.mui-radio input[type=radio]{
+	top: 12px;
+}
+.mui-checkbox input[type='checkbox']:before,.mui-radio input[type=radio]:before {
+	font-size: 18px;
+	padding-top: 2px;
+}
+.mui-radio input[type='radio'], .mui-checkbox input[type='checkbox'] {
+	position: absolute;
+	right: 20px;
+	display: inline-block;
+	width: 28px !important;
+	height: 26px;
+	border: 0;
+	outline: 0 !important;
+	background-color: transparent;
+	-webkit-appearance: none;
+}
+.head-div{
+	text-align:center;
+}
+.head-pic{
+	margin-top: 12px;
+	width:80px;
+}
+.setPwd{
+	margin:32px 0px;
+	color: #333;
+	font-size: 14px;
+	position: fixed;
+	right: 10px;
+	opacity: 0.65;
+	display: block;
+}

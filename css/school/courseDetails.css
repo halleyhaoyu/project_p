@@ -1,0 +1,24 @@
+.content-div {
+	margin: 12px;
+	border: 1px solid #ddd;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.11);
+	border-radius: 6px;
+}
+
+.content-title{
+	background: #FEE39C;
+	padding: 6px 12px;
+	color: #333;
+}
+
+.content-img{
+	padding: 12px;
+	width: 100%;
+}
+
+.content-desc{
+	padding: 12px;
+	text-indent: 2em;
+}
+
+

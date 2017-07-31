@@ -1,0 +1,99 @@
+.works-desc:first-child{
+	margin-top: 0;
+}
+
+.works-desc{
+	border: 1px solid #eee;
+	background: #fff;
+	padding: 12px;
+	box-shadow:0 0 19px 0 rgba(0,0,0,0.18);
+	margin-top: 12px;
+}
+.works-img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 12px;
+}
+.works-username{
+	font-size: 12px !important;
+	opacity: .5;
+}
+.works-time{
+	float: right;
+}
+.works-content{
+	margin-top: 12px;
+	color: #333;
+}
+
+.works-desc-pic{
+	width: 30%;
+	margin: 2px;
+}
+.works-answer{
+	margin: 12px 0;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 12px;
+}
+
+.works-answer:last-child{
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+.icon-line{
+	height: 24px;
+}
+
+.mui-icon-extra-like{
+	color: #333;
+	font-size: 14px;
+	float: right;
+	margin-right: 20px;
+}
+.mui-icon-extra-comment{
+	color: #333;
+	font-size: 14px;
+	float: right;
+}
+
+.item-guaji, .item-call {
+	padding: 0;
+}
+
+
+.show-desc{
+	margin: 12px;
+	height: 120px;
+	border: 1px solid #eee;
+	background: #fff;
+	padding:12px 0 12px 12px;
+	border-radius: 6px;
+	box-shadow: 0 0 19px 0 rgba(0,0,0,0.18);
+}
+
+.show-desc-right{
+	width: 65px;
+	height: 100%;
+	float: right;
+	border-left:1px solid #eee;
+	padding: 20px 0;
+	color: #333;
+	text-align: center;
+}
+.show-icon{
+	width: 30px;
+}
+.show-desc-left{
+	height: 100%;
+	margin-right: 46px;
+}
+.show-desc-title{
+	font-size: 16px !important;
+	margin-bottom: 6px;
+}
+.show-desc-content{
+	padding: 6px 0;
+	opacity: .65;
+}

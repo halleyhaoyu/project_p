@@ -1,0 +1,63 @@
+body,div,h1,h2,h3,h4,h5,h6,p,section,ul,li{
+	margin: 0;
+	padding: 0;
+}
+h3{
+	margin: 12px 0 0 36px;
+}
+.detail_list{
+	margin: 6px 36px;
+}
+.detail_list li{
+	list-style: none;
+	margin: 12px 0;
+}
+.date{
+	color: #AAA;
+}
+p{
+	font-size: 14px;
+	padding: 6px 0 0 12px;
+}
+section{
+	overflow: hidden;
+}
+section:before{
+	content: '.';
+	color: transparent;
+	position: absolute;
+	left: 16px;
+	top: 128px;
+	display: block;
+	width: 3px;
+	height: 100%;
+	background: -webkit-linear-gradient(to bottom, #FFF, transparent);
+	background: linear-gradient(to bottom, #FFF, transparent);
+}
+.date:before{
+	content: '.';
+	color: transparent;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	left: 8px;
+	margin-top: 2px;
+	background: url(../../images/school/timeline.png);
+	background-size: cover;
+}
+
+.mui-bar-nav{
+	box-shadow: none;
+}
+
+body,.mui-content {
+	background: #FEC332;
+}
+.timeline-dz{
+	width: 100px;
+	position: fixed;
+	right: -24px;
+	opacity: .5;
+}

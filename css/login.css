@@ -1,0 +1,128 @@
+html,body{
+	height: 100%;
+	letter-spacing:1px;
+	font-family: "微软雅黑" !important;
+	background-size: cover !important;
+}
+
+body,.mui-content{background-color: initial;}
+
+@media screen and (max-width: 374px){
+	body{
+		background: #25a5ff url(../images/login/bg.png) no-repeat fixed center;
+	}
+	body,input,textarea,p{font-size: 14px;}
+	.mui-input-row>label{line-height: 1.5}
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px){
+	body{
+		background: #25a5ff url(../images/login/bg.png) no-repeat fixed center;
+	}
+	body,input,textarea,p{font-size: 15px;}
+	.mui-input-row>label{line-height: 1.2}
+}
+
+@media screen and (min-width: 414px) {
+	body{
+		background: #25a5ff url(../images/login/bg@3x.png) no-repeat fixed center;
+	}
+	body,input,textarea,p{font-size: 16px;}
+	.mui-input-row>label{line-height: 1.18}
+}
+:-moz-placeholder {
+	color: #fff; opacity:1;
+}
+
+::-moz-placeholder {
+	color: #fff;opacity:1;
+}
+
+input:-ms-input-placeholder{
+	color: #fff;opacity:1;
+}
+
+input::-webkit-input-placeholder{
+	color: #fff;opacity:1;
+}
+
+
+
+.mui-bar-nav~.mui-content{
+	padding-top:60px;
+}
+.mui-input-row .mui-input-password~.mui-icon-eye{
+	color: #FFF;
+	opacity: 0.65;
+	top: 8px;
+}
+.mui-input-row .mui-input-password~.mui-icon-eye.mui-active{
+	color: #FFF;
+	opacity: 1;
+}
+
+.img-wrapper img{margin: 0 auto;display: block;height: auto;}
+
+
+.mui-input-group{margin: 30px;background: inherit;}
+
+.mui-input-group .mui-input-row{
+	margin: 15px 0;
+	border: 1px solid #fff;
+	border-radius: 30px;
+}
+.mui-input-group input{padding-left:42px;color: #fff;}
+
+.mui-input-group input:last-child {
+    background: inherit;
+}
+.mui-button-row{padding-top: 0;}
+
+.button-group{margin-top:35px;}
+
+.button-group button{padding:0;height:38px;}
+
+#login-btn{
+	background-color: #FEC63A;
+	border-color: #FEC63A;
+	border-radius:25px;
+	margin-bottom: 15px;
+	box-shadow:0 8px 9px 0 rgba(7,155,237,0.81);
+}
+
+#reg-btn{color: #25A5FF;border-color: #25A5FF;border-radius:25px;margin-bottom:25px;}
+
+.link-group a{color:#33a2f1;font-size:14px;}
+
+.mui-input-group:after,.mui-input-group .mui-input-row:after{height: 0;}
+
+.mui-icon:not(.mui-icon-eye){
+	position: absolute;
+	margin-top: 6px;
+	margin-left: 12px;
+	color: #fff;
+    /*width: 16px;*/
+    /*height: 18px;*/
+    /*background-size: 16px 18px;*/
+}
+
+/*.mui-icon-locked{transform: scaleY(.7);}*/
+  	
+
+.icon-account{
+	background-image: url(../images/mobile@2x.png);
+}
+.icon-password{
+    background-image: url(../images/password@2x.png);
+}
+
+.bottom-desc{
+	text-align: center;
+	font-size: 12px;
+	color: #FFF;
+	position: fixed;
+	bottom: 8px;
+	left: 0;
+	right: 0;
+	opacity: 0.65;
+}

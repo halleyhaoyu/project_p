@@ -1,0 +1,112 @@
+html,body{height: 100%;}
+
+body,.mui-content{font-family: "微软雅黑";background-color: #F7F7F7;color:#1A1A1A}
+
+@media screen and (max-width: 374px){
+	body,input,textarea,p{font-size: 14px !important;font-family: "微软雅黑" !important;} 
+	.mui-input-row>label{line-height: 1.5 !important;}
+	.link-protocol {font-size: 14px !important;}
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px){
+	body,input,textarea,p{font-size: 15px !important;font-family: "微软雅黑" !important;} 
+	.mui-input-row>label{line-height: 1.2 !important;}
+	.link-protocol {font-size: 15px !important;}
+}
+
+@media screen and (min-width: 414px) {
+	body,input,textarea,p{font-size: 16px !important;font-family: "微软雅黑" !important;} 
+	.mui-input-row>label{line-height: 1.18 !important;}
+	.link-protocol {font-size: 16px !important;}
+}
+.mui-bar-nav,.besttone-head{
+    color: #fff !important;
+    height: 64px;
+    background: -webkit-linear-gradient(bottom,  #FED361,#FEC332); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom, #FED361,#FEC332); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom, #FED361,#FEC332); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom, #FED361,#FEC332); /* 标准的语法（必须放在最后） */
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.3)
+}
+.head-dz{
+    width: 66px;
+    position: fixed;
+    right: 24px;
+}
+
+.mui-title {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 84px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0 -10px;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: #000;
+}
+
+.mui-bar .mui-title{color: #fff;}
+
+
+
+.mui-bar-nav {
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0 0 rgba(0,0,0,0.3);
+}
+
+.mui-bar-nav~.mui-content {
+    padding-top:64px;
+}
+
+.mui-bar .mui-icon {
+    font-size: 24px;
+    position: relative;
+    z-index: 20;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.mui-title {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 84px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0 -10px;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: #000;
+}
+
+header a,.mui-bar .mui-title{color: #fff;}
+
+a {
+    color: #26a5ff;
+}
+
+.mui-input-row .mui-input-clear ~ .mui-icon-clear.mui-active, .mui-input-row .mui-input-speech ~ .mui-icon-speech.mui-active, .mui-input-row .mui-input-password ~ .mui-icon-eye.mui-active {
+    color: #26a5ff;
+}
+
+.mui-input-group .mui-input-row:after {background-color:#e0e0e0 !important;}
+
+.mui-table-view-cell:after {background-color:#e0e0e0 !important;}
+
+
+.besttone-full-btn{
+	background-color: #26a5ff;
+	padding:6px;
+	border-color:#26a5ff;
+	border-radius:25px;
+}
+
+
+.besttone-del-btn{
+	padding:6px;
+	border-radius:25px;
+}

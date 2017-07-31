@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的课程</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/curriculum.css" />
+	<link href="../css/dashboard.css" rel="stylesheet"/>
+	<link href="../css/top.css" rel="stylesheet"/>
+    <link href="../css/foot.css" rel="stylesheet"/>
+    <style type="text/css">
+    </style>
+</head>
+<body class="pagebg  bg_gradient">
+	<div >
+		<header class="mui-bar mui-bar-nav">
+			<img src="../images/head-dz.png" class="head-dz"/>
+			<a class="mui-pull-left" style="margin: 32px 0;color:#000;font-size:14px;position: fixed;opacity: .5;"
+				id="action-1"> 分类 </a>
+			<div  class="mui-segmented-control title-control">
+				<a class="mui-control-item mui-active call-btn" href="#item1" id="it1">
+					我的课程
+				</a>
+				<a class="mui-control-item guaji-btn" href="#item2" id="it2">
+					全部课程
+				</a>
+			</div>
+			<a class="mui-pull-right" style="margin:2px 0;color:#000;font-size:14px;position: fixed;right:10px;opacity: .5;"
+			   id="action-2"> 编辑 </a>
+		</header>
+
+
+		<div id="item1" class="item-call mui-content mui-control-content  mui-active">
+			<div class="myh5_card" style="margin-top: 10px;">
+				<a href="#" class="top sc_purple">
+					<img src="../images/school/cc_pic.png" class="photo" />
+
+					<p class="title">Walking 上海</p>
+					<p href="#"  class="content1">“国际理解教育”</p>
+					<p class="content2">校本课程教材 试用本</p>
+				</a>
+			</div>
+
+			<div class="myh5_card">
+				<a href="#" class="top sc_cyan">
+					<img src="../images/school/cc_pic.png" class="photo" />
+					<p class="title">Walking 上海</p>
+					<p class="content1">班级：三 1 班</p>
+					<p class="content2">时间：周一</p>
+				</a>
+			</div>
+
+			<div class="myh5_card">
+				<a href="#" class="top sc_orange">
+					<img src="../images/school/cc_pic.png" class="photo" />
+					<p class="title">Walking 上海</p>
+					<p class="content1">班级：三 1 班</p>
+					<p class="content2">时间：周一</p>
+				</a>
+			</div>
+
+		</div>
+
+		<div id="item2" class="item-call mui-content mui-control-content">
+			<div class="mui-segmented-control desc-control">
+				<a class="mui-control-item mui-active " href="#item11"><span>全部</span></a>
+				<a class="mui-control-item " href="#item12"><span>自然</span></a>
+				<a class="mui-control-item " href="#item13"><span>体育</span></a>
+				<a class="mui-control-item " href="#item14"><span>美术</span></a>
+				<a class="mui-control-item " href="#item15"><span>音乐</span></a>
+				<a class="mui-control-item " href="#item16"><span>历史</span></a>
+			</div>
+			<div id="item11" class="mui-control-content mui-active" style="margin-top:45px;">
+				<div class="myh5_card">
+					<a href="#" class="top sc_cyan">
+						<img src="../images/school/cc_pic.png" class="photo" />
+						<img src="../images/school/sc_add.png" class="arrow" />
+						<p class="title">Walking 上海</p>
+						<p class="content1">班级：三 1 班</p>
+						<p class="content2">时间：周一</p>
+					</a>
+				</div>
+
+				<div class="myh5_card">
+					<a href="#" class="top sc_pink">
+						<img src="../images/school/cc_pic.png" class="photo" />
+						<img src="../images/school/sc_add.png" class="arrow" />
+						<p class="title">Walking 上海</p>
+						<p class="content1">班级：三 1 班</p>
+						<p class="content2">时间：周一</p>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+	<script src="../js/jquery-2.1.4.min.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+        mui.init();
+
+        document.getElementById('it1').addEventListener('tap',function(){
+			$('#action-1').css('display','block');
+			$('#action-2').css('display','block');
+            $('.mui-bar-nav').css('box-shadow','0 1px 6px #ccc');
+
+        });
+        document.getElementById('it2').addEventListener('tap',function(){
+			$('#action-1').css('display','none');
+			$('#action-2').css('display','none');
+			$('.mui-bar-nav').css('box-shadow','none');
+        });
+	</script>
+
+</body>
+</html>

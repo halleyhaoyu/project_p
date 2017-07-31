@@ -1,0 +1,74 @@
+
+.mui-icon {
+	font-family: Muiicons;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1;
+	display: inline-block;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+}
+.mui-table-view-cell>a:not(.mui-btn) {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: -15px -15px;
+	padding: inherit;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: inherit;
+}
+.mui-bar-nav {
+	top: 0;
+	-webkit-box-shadow: 0 1px 6px #ede4ff;
+	box-shadow: 0 1px 6px #ede4ff;
+}
+
+.mui-content1 {
+	padding: 20px;
+	background-color: transparent;
+	padding-top: 260px !important;
+}
+.myh5_card {
+	margin: 10px 0;
+	padding: 12px 0 12px 12px;
+	height: initial;
+}
+.myh5_card .top .title {
+	font-size: 24px;
+	color: #FFF;
+	font-weight: bold;
+	margin: 30px 0 0 80px;
+	text-align: center;
+}
+.myh5_card .top .photo {
+	position: fixed;
+}
+.myh5_card .top .photo1 {
+	width: 50px;
+	height: 50px;
+	margin-top: 15px;
+	margin-left:15px;
+	position: fixed;
+}
+.course-title-icon{
+	width: 12px;
+	height: 12px;
+	border: 1px solid #F3BA2B;
+	border-radius: 50%;
+	display: inline-block;
+}
+.course-title{
+	color: #D9AA34;
+	display: inline-block;
+	font-size: 16px;
+}
+.course-desc{
+	padding: 8px 0;
+	color: #333;
+	border-bottom: 1px solid #ddd;
+}
+.course-desc:last-child{
+	border-bottom: 0;
+}

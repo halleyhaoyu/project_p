@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>活动集锦</title>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.css" rel="stylesheet"/>
+	<link href="../css/app.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/mui.picker.min.css" />
+    <link rel="stylesheet" href="../css/mui.poppicker.css" />
+	<link href="../css/dashboard.css" rel="stylesheet"/>
+	<link href="../css/top.css" rel="stylesheet"/>
+	<link href="../css/school/activityReply.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<img src="../images/head-dz.png" class="head-dz"/>
+		<h1 class="mui-title">活动集锦</h1>
+	</header>
+	<div class="mui-content">
+
+		<div class="button buttonContianer">
+			<div class="button button1"></div>
+			<div class="button button2"></div>
+			<div class="button button3"></div>
+			<div class="button button4"></div>
+		</div>
+		<div class="div-tips">附件上限为10个。</div>
+
+
+
+		<form >
+
+			<div>
+
+				<label class="label-desc">活动主题 </label>
+				<input type="text" class="input-content" data-input-password="3" placeholder="请输入活动主题">
+			</div>
+
+
+			<div class="out-div">
+				<label class="label-desc-cg">个人成果 </label>
+				<textarea id="textarea" rows="3" placeholder="请输入活动体会" class="text-content"></textarea>
+			</div>
+
+
+		</form>
+
+
+	</div>
+
+	<button  type="button" class="mui-btn mui-btn-primary mui-btn-block besttone-full-btn"> 保 存 </button>
+<script type="text/javascript" src="../js/mui.picker.js" ></script>
+<script type="text/javascript" src="../js/mui.poppicker.js" ></script>
+<script type="text/javascript" charset="UTF-8">
+    var count = 0
+    $(".buttonContianer").on('tap',function(){
+        count ++
+        if(count % 2 == 1){
+            $(this).addClass('show')
+            $(this).children().animate({
+                opacity: 1
+            })
+        }else{
+            $(this).removeClass('show')
+            $(this).children().animate({
+                opacity: 0
+            })
+        }
+    })
+</script>
+</body>
+</html>
