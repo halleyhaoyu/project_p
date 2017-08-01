@@ -12,6 +12,7 @@
 	<link href="../css/dashboard.css" rel="stylesheet"/>
 	<link href="../css/top.css" rel="stylesheet"/>
 	<link href="../css/school/activityList.css" rel="stylesheet"/>
+    <link href="../css/school/pushCommon.css" rel="stylesheet"/>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav">
@@ -21,92 +22,169 @@
 		<a class="mui-pull-right top-edit"> 交流区 </a>
 	</header>
 
-	<nav class="mui-bar mui-bar-tab">
-		<a class="mui-tab-item" href="#tabbar">
+	
+	<nav id="main_bar" class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" href="courseAll.html">
 			<span class="mui-icon tabbar-ns-1 foot-icon"></span>
 			<span class="mui-tab-label">课程</span>
 		</a>
-		<a class="mui-tab-item  mui-active" href="#tabbar-with-chat">
+		<a class="mui-tab-item mui-active" href="activityList.html">
 			<span class="mui-icon tabbar-ns-2 foot-icon"></span>
 			<span class="mui-tab-label">活动</span>
 		</a>
-		<a class="mui-tab-item " href="#tabbar-with-contact">
+		<a class="mui-tab-item" href="scShowAll.html">
 			<span class="mui-icon tabbar-ns-3 foot-icon"></span>
 			<span class="mui-tab-label">成果</span>
 		</a>
-		<a class="mui-tab-item " href="#tabbar-with-map">
+		<a class="mui-tab-item " href="personalCenter.html">
 			<span class="mui-icon tabbar-ns-4 foot-icon"></span>
 			<span class="mui-tab-label">我的</span>
 		</a>
 	</nav>
 
-
-
-
-	<div class="mui-content">
-
-		<div class="show-desc">
-			<div class="show-desc-right">
-				<div class="ac-end">已结束</div>
+ 
+	<div id="slider" class="mui-slider mui-content mui-fullscreen">				
+		<div class="mui-slider-group">
+			<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+				<div id="scroll1" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul class="mui-table-view">									
+							<li class="mui-table-view-cell">
+								<div class="show-desc">
+									<div class="show-desc-right">
+										<div class="ac-end">已结束</div>
+									</div>
+									<div class="show-desc-left">
+										<p class="show-desc-title">欢乐中国豫园行</p>
+										<p class="show-desc-content">发布人：赵先生</p>
+										<p class="show-desc-content">发布日期：2017-07-25</p>
+									</div>
+						
+								</div>
+							</li>
+							<li class="mui-table-view-cell">
+								<div class="show-desc">
+									<div class="show-desc-right">
+										<div class="ac-end-no">未结束</div>
+									</div>
+									<div class="show-desc-left">
+										<p class="show-desc-title">欢乐中国豫园行</p>
+										<p class="show-desc-content">发布人：赵先生</p>
+										<p class="show-desc-content">发布日期：2017-07-25</p>
+									</div>
+						
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="show-desc-left">
-				<p class="show-desc-title">欢乐中国豫园行</p>
-				<p class="show-desc-content">发布人：赵先生</p>
-				<p class="show-desc-content">发布日期：2017-07-25</p>
-			</div>
-
+			
 		</div>
-
-		<div class="show-desc">
-			<div class="show-desc-right">
-				<div class="ac-end-no">未结束</div>
-			</div>
-			<div class="show-desc-left">
-				<p class="show-desc-title">欢乐中国豫园行</p>
-				<p class="show-desc-content">发布人：赵先生</p>
-				<p class="show-desc-content">发布日期：2017-07-25</p>
-			</div>
-
-		</div>
-
-
-		<div class="show-desc">
-			<div class="show-desc-right">
-				<div class="ac-end">已结束</div>
-			</div>
-			<div class="show-desc-left">
-				<p class="show-desc-title">欢乐中国豫园行</p>
-				<p class="show-desc-content">发布人：赵先生</p>
-				<p class="show-desc-content">发布日期：2017-07-25</p>
-			</div>
-
-		</div>
-
-
-		<div class="show-desc">
-			<div class="show-desc-right">
-				<div class="ac-end-no">未结束</div>
-			</div>
-			<div class="show-desc-left">
-				<p class="show-desc-title">欢乐中国豫园行</p>
-				<p class="show-desc-content">发布人：赵先生</p>
-				<p class="show-desc-content">发布日期：2017-07-25</p>
-			</div>
-
-		</div>
-
-
 	</div>
+			
 
-
-
-
-
-
-
-	
-<script type="text/javascript" charset="UTF-8">
-  	mui.init();
-</script>
+	<script src="../js/jquery-2.1.4.min.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.pullToRefresh.js"></script>
+	<script src="../js/mui.pullToRefresh.material.js"></script>
+	<script src="../js/app.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+	  	mui.init();
+	  	
+	    mui('#main_bar').on('tap', 'a', function(e) {
+		    //获取目标子页的id
+		    var targetTab = this.getAttribute('href');
+		    window.location.href=targetTab;
+		});
+		
+		(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				var pageIndex = 1;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有下拉刷新，上拉加载。
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+						$(pullRefreshEl).pullToRefresh({
+							down: {
+								callback: function() {
+									var self = this;
+									var userInfo = app.getState(); 
+									if(userInfo.manageId!=undefined && userInfo.manageId!=''){
+										app.getActivityAll(userInfo,5,1,function(data){
+											if(data.code==0){												
+												var ul = self.element.querySelector('.mui-table-view');
+												ul.innerHTML="";
+												ul.insertBefore(createFragment(index,ul, data.objectList), ul.firstChild);
+											 	 pageIndex=1;
+											}else{
+												mui.toast(data.msg);
+											}
+											
+												self.endPullDownToRefresh();
+										});
+									}else{
+										app.gotoLogin();
+									}
+								}
+							},
+							up: {
+								callback: function() {
+									var self = this;
+									var aa = index;
+									var userInfo = app.getState(); 
+									if(userInfo.manageId!=undefined && userInfo.manageId!=''){
+										app.getActivityAll(userInfo,5,pageIndex+1,function(data){
+											if(data.code==0){												
+												var ul = self.element.querySelector('.mui-table-view'); 
+												ul.appendChild(createFragment(index,ul, data.objectList), ul.firstChild);
+											 	 pageIndex++;
+											}else{
+												mui.toast(data.msg);
+											}
+											
+												self.endPullUpToRefresh();
+										});
+									}else{
+										app.gotoLogin();
+									}
+								}
+							}
+						});
+					});
+					var createFragment = function(index,ul, objectList) {
+						var length = ul.querySelectorAll('li').length;
+						var fragment = document.createDocumentFragment();
+						var li;
+						for (var i = 0; i < objectList.length; i++) {
+							li = document.createElement('li');
+							li.className = 'mui-table-view-cell';
+							var insertHtml=""
+							if(index==0){ //我的课程
+								insertHtml+="<div class=\"show-desc\">";
+								insertHtml+="	<div class=\"show-desc-right\">";
+								insertHtml+="		<div class=\"ac-end\">已结束</div>";
+								insertHtml+="	</div>";
+								insertHtml+="	<div class=\"show-desc-left\">";
+								insertHtml+="		<p class=\"show-desc-title\">"+objectList[i].actName+"</p>";
+								insertHtml+="		<p class=\"show-desc-content\">发布人："+objectList[i].actOperName+"</p>";
+								insertHtml+="		<p class=\"show-desc-content\">发布日期："+objectList[i].actTime+"</p>";
+								insertHtml+="	</div>";
+								insertHtml+="</div>";
+								 
+							}
+							li.innerHTML = insertHtml;
+							fragment.appendChild(li);
+						}
+						return fragment;
+					};
+				});
+			})(mui);
+	</script>
 </body>
 </html>

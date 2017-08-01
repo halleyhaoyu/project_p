@@ -10,80 +10,9 @@
 	<link href="../css/dashboard.css" rel="stylesheet"/>
 	<link href="../css/top.css" rel="stylesheet"/>
     <link href="../css/foot.css" rel="stylesheet"/>
+    <link href="../css/school/pushCommon.css" rel="stylesheet"/>
     <style>
-			html,
-			body {
-				background-color: #efeff4;
-			}
-			.mui-bar~.mui-content .mui-fullscreen {
-				top: 10px;
-				height: auto;
-			}
-			.mui-pull-top-tips {
-				position: absolute;
-				top: -20px;
-				left: 50%;
-				margin-left: -25px;
-				width: 40px;
-				height: 40px;
-				border-radius: 100%;
-				z-index: 1;
-			}
-			.mui-bar~.mui-pull-top-tips {
-				top: 24px;
-			}
-			.mui-pull-top-wrapper {
-				width: 42px;
-				height: 42px;
-				display: block;
-				text-align: center;
-				background-color: #efeff4;
-				border: 1px solid #ddd;
-				border-radius: 25px;
-				background-clip: padding-box;
-				box-shadow: 0 4px 10px #bbb;
-				overflow: hidden;
-			}
-			.mui-pull-top-tips.mui-transitioning {
-				-webkit-transition-duration: 200ms;
-				transition-duration: 200ms;
-			}
-			.mui-pull-top-tips .mui-pull-loading {
-				/*-webkit-backface-visibility: hidden;
-				-webkit-transition-duration: 400ms;
-				transition-duration: 400ms;*/
-				
-				margin: 0;
-			}
-			.mui-pull-top-wrapper .mui-icon,
-			.mui-pull-top-wrapper .mui-spinner {
-				margin-top: 7px;
-			}
-			.mui-pull-top-wrapper .mui-icon.mui-reverse {
-				/*-webkit-transform: rotate(180deg) translateZ(0);*/
-			}
-			.mui-pull-bottom-tips {
-				text-align: center;
-				background-color: #efeff4;
-				font-size: 15px;
-				line-height: 40px;
-				color: #777;
-			}
-			.mui-pull-top-canvas {
-				overflow: hidden;
-				background-color: #fafafa;
-				border-radius: 40px;
-				box-shadow: 0 4px 10px #bbb;
-				width: 40px;
-				height: 40px;
-				margin: 0 auto;
-			}
-			.mui-pull-top-canvas canvas {
-				width: 40px;
-			}
-			.mui-slider-indicator.mui-segmented-control {
-				background-color: #efeff4;
-			}
+			 
 		</style>
 </head>
 <body class="pagebg  bg_gradient">
@@ -101,20 +30,20 @@
 			<a class="mui-pull-right top-edit"
 			   id="action-2"> 编辑 </a>
 		</header>
-		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="#tabbar">
+		<nav id="main_bar" class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="courseAll.html">
 				<span class="mui-icon tabbar-ns-1 foot-icon"></span>
 				<span class="mui-tab-label">课程</span>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-with-chat">
+			<a class="mui-tab-item" href="activityList.html">
 				<span class="mui-icon tabbar-ns-2 foot-icon"></span>
 				<span class="mui-tab-label">活动</span>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-with-contact">
+			<a class="mui-tab-item" href="scShowAll.html">
 				<span class="mui-icon tabbar-ns-3 foot-icon"></span>
 				<span class="mui-tab-label">成果</span>
 			</a>
-			<a class="mui-tab-item " href="#tabbar-with-map">
+			<a class="mui-tab-item " href="personalCenter.html">
 				<span class="mui-icon tabbar-ns-4 foot-icon"></span>
 				<span class="mui-tab-label">我的</span>
 			</a>
@@ -230,9 +159,13 @@
 			$('#action-1').css('display','none');
 			$('#action-2').css('display','none');
 			$('.mui-bar-nav').css('box-shadow','none');
-			
-			
-        });
+        }); 
+        mui('#main_bar').on('tap', 'a', function(e) {
+		    //获取目标子页的id
+		    var targetTab = this.getAttribute('href');
+		    window.location.href=targetTab;
+		});
+ 
         (function($) {
 				//阻尼系数
 				var deceleration = mui.os.ios?0.003:0.0009;
