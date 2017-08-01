@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>学生个人中心</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.css" rel="stylesheet"/>
+    <link href="../css/school/courseAll.css" rel="stylesheet"/>
+  	<link href="../css/foot.css" rel="stylesheet"/>
+	<link href="../css/school/studentCenter.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" style="height: 260px;
+    background: url(../images/school/psct_top.png);background-size: cover">
+		<a class="mui-icon mui-icon-compose mui-pull-right"></a>
+		<img src="../images/school/head-btm.png" class="head-pic-btm">
+		<img src="../images/school/ct-dianzhui.png" class="dz-icon">
+
+
+
+		<img src="../images/school/head-pic.png" class="head-pic">
+		<p class="user-name">多仔</p>
+		<p class="class-name">一年级1班</p>
+		<p class="school-name">学多多开放学校</p>
+
+	</header>
+	<nav id="main_bar" class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" href="courseAll.html">
+			<span class="mui-icon tabbar-ns-1 foot-icon"></span>
+			<span class="mui-tab-label">课程</span>
+		</a>
+		<a class="mui-tab-item" href="activityList.html">
+			<span class="mui-icon tabbar-ns-2 foot-icon"></span>
+			<span class="mui-tab-label">活动</span>
+		</a>
+		<a class="mui-tab-item" href="scShowAll.html">
+			<span class="mui-icon tabbar-ns-3 foot-icon"></span>
+			<span class="mui-tab-label">成果</span>
+		</a>
+		<a class="mui-tab-item mui-active" href="personalCenter.html">
+			<span class="mui-icon tabbar-ns-4 foot-icon"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+	<div class="mui-content1">
+
+		<div class="myh5_card">
+			<a href="#" class="top psct_purple">
+				<img src="../images/school/btm-round.png" class="photo">
+				<img src="../images/school/foot-icon.png" class="photo1" />
+				<p class="title">成长足迹</p>
+			</a>
+		</div>
+
+		<div class="myh5_card">
+			<a href="#" class="top psct_purple">
+				<img src="../images/school/btm-round.png" class="photo">
+				<img src="../images/school/honor-icon.png" class="photo1" />
+				<p class="title">我的荣誉</p>
+			</a>
+		</div>
+
+		<div class="myh5_card">
+			<a href="#" class="top psct_purple">
+				<img src="../images/school/btm-round.png" class="photo">
+				<img src="../images/school/honor-icon.png" class="photo1" />
+				<p class="title">学生点赞数排行榜</p>
+			</a>
+		</div>
+
+		<div class="myh5_card">
+			<a href="#" class="top psct_purple">
+				<img src="../images/school/btm-round.png" class="photo">
+				<img src="../images/school/honor-icon.png" class="photo1" />
+				<p class="title">活动点赞数排行榜</p>
+			</a>
+		</div>
+		
+	</div>
+	
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+    mui('#main_bar').on('tap', 'a', function(e) {
+	    //获取目标子页的id
+	    var targetTab = this.getAttribute('href');
+	    window.location.href=targetTab;
+	});
+</script>
+</body>
+</html>
